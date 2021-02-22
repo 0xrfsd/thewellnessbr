@@ -18,10 +18,10 @@ const HomeTabNavigator = () => {
 				},
 
 				style: {
-					height: 60,
+					height: 65,
 					backgroundColor: "#333",
 					paddingTop: 10,
-					paddingBottom: 10,
+					paddingBottom: 15,
 				},
 			}}
 		>

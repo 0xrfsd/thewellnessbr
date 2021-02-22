@@ -1,22 +1,18 @@
 export default [
     {
       id: '0',
-      description: 'Tenerife, Canary Islands',
+      description: 'Trancoso, Bahía',
     },
     {
       id: '1',
-      description: 'Tenerife, Santa Cruz de Tenerife',
+      description: 'Ilha de Itacaré, Bahía',
     },
     {
       id: '2',
-      description: 'Tenerife, El Medano',
+      description: 'Ilha de Itaparíca, Bahía',
     },
     {
       id: '3',
-      description: 'Tenerife, Costa Adeje',
-    },
-    {
-      id: '4',
-      description: 'Tenerife, Puerto de la Cruz',
+      description: 'Ilha de Boipeba',
     },
   ];

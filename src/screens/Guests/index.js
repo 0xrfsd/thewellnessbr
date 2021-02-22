@@ -16,7 +16,7 @@ const GuestsScreen = () => {
 
                 <View> 
                     <Text style={{fontWeight: "bold"}}>Adults</Text>
-                    <Text style={{color: "8d8d8d"}}>Ages 13 or above</Text>
+                    <Text style={{color: "#8d8d8d"}}>Ages 13 or above</Text>
                 </View>
 
                 <View style={{flexDirection: 'row', alignItems: 'center'}}>
@@ -45,7 +45,7 @@ const GuestsScreen = () => {
 
                 <View> 
                     <Text style={{fontWeight: "bold"}}>Children</Text>
-                    <Text style={{color: "8d8d8d"}}>Ages 2 - 12</Text>
+                    <Text style={{color: "#8d8d8d"}}>Ages 2 - 12</Text>
                 </View>
 
                 <View style={{flexDirection: 'row', alignItems: 'center'}}>
@@ -72,7 +72,7 @@ const GuestsScreen = () => {
 
                 <View> 
                     <Text style={{fontWeight: "bold"}}>Infants</Text>
-                    <Text style={{color: "8d8d8d"}}>Under 2</Text>
+                    <Text style={{color: "#8d8d8d"}}>Under 2</Text>
                 </View>
 
                 <View style={{flexDirection: 'row', alignItems: 'center'}}>
@@ -98,7 +98,7 @@ const GuestsScreen = () => {
 <View style={{ margin: 20, marginTop: 'auto' }}>
 <Pressable 
         style={{ marginTop: 'auto', borderRadius: 5, height: 50, width: '100%', justifyContent: 'center', alignItems: 'center', backgroundColor: '#cd5c5c' }}
-        onPress={() => navigation.navigate('Search Result')}>
+        onPress={() => navigation.navigate('SearchResults')}>
             <Text style={{ color: '#fff', fontSize: 22, fontWeight: 'bold', fontFamily: 'BebasNeue' }}>Search</Text>
         </Pressable>
 </View>

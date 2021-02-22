@@ -22,9 +22,9 @@ const HomeScreen = (props) => {
 
         {/* Search Button */}   
         <Pressable 
-        onPress={() => navigation.navigate('Search Destination')}
+        onPress={() => navigation.navigate('SearchDestination')}
         style={{ marginTop: 40, widht: '100%', height: 40, backgroundColor: '#fff', justifyContent: 'center', alignItems: 'center', paddingLeft: 20, paddingRight: 20 }}>
-    <Text style={{ color: '#333', fontFamily: 'BebasNeue', fontSize: 22 }}>Inicie uma experiência agora!</Text>
+    <Text style={{ color: '#333', fontFamily: 'BebasNeue', fontSize: 22 }}>Clique aqui para iniciar uma experiência!</Text>
         </Pressable>
 
         <ImageBackground resizeMode="cover"
@@ -36,7 +36,7 @@ source={require('../../../assets/images/wallpaper.jpg')}
 
 <Pressable 
 style={{ height: 40, width: 200, backgroundColor: '#cd5c5c', borderRadius: 5, justifyContent: 'center', alignItems: 'center' }}
-onPress={() => navigation.navigate('Search Destination')}>
+onPress={() => navigation.navigate('SearchDestination')}>
     <Text style={{ color: '#fff', fontFamily: 'BebasNeue', fontSize: 22 }}>Explore a new universe.</Text>
 </Pressable>
         </View>

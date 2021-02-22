@@ -1,47 +1,36 @@
-import React, { useState } from 'react';
-import { View, Text, FlatList, TextInput, Pressable} from 'react-native';
-import { Entypo } from '@expo/vector-icons'; 
-
-import { } from './styles';
-
-import searchResults from '../../../assets/data/search';
+import React, { useState } from 'react'
+import { FlatList, StyleSheet, Text, TextInput, View } from 'react-native'
+import search from '../../../assets/data/search';
+import styles from './styles';
+import {Entypo} from "@expo/vector-icons"
+import { Pressable } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-const DestinationSearch = (props) => {
 
-    const navigation = useNavigation();
+const DestinationSearchScreen = () => {
+    const [inputText, setInputText] = useState("")
 
-    const [inputText, setInputText] = useState('');
+    const navigation = useNavigation()
 
     return (
-        <View style={{ padding: 20, height: '100%' }}>
+        <View style={{ }}>
+            {/* Google Autocomplete... */}
+            {/* <TextInput style={{ height: 40, width: '100%', backgroundColor: 'transparent'}} placeholder="Where are you going?" value={inputText} onChangeText={setInputText}/> */}
 
-        <TextInput
-        value={inputText}
-        onChangeText={setInputText}
-        style={{ width: '100%', height: 50, backgroundColor: 'transparent', borderRadius: 5 }}
-        placeholder="Where are you going?"
-        />
+            <FlatList 
+                data={search}
+                renderItem={({item}) => (
+                    <Pressable style={{ flexDirection: 'row', alignItems: 'center' }} onPress={() => navigation.navigate("Guests")}>
+                        <View style={{ backgroundColor: 'transparent', borderRadius: 5, width: 50, justifyContent: 'center', alignItems: 'center', height: 50, margin: 10 }}>
+                            <Entypo name="location-pin" size={33}/>
+                        </View>
 
-        {/* FlatList not working, not fetching data and not displaying data fix it! */}
-
-        {/* <FlatList 
-        data={searchResults}
-        renderItem={({item}) => {
-                <View style={{ flexDirection: 'row' }}>
-                    <Entypo name="location-pin" size={24} color="black" />
-                <Text style={{ }}>{item.description}</Text>
-                </View>
-        }}/> */}
-
-<Pressable 
-        style={{ marginTop: 'auto', borderRadius: 5, height: 50, width: '100%', justifyContent: 'center', alignItems: 'center', backgroundColor: '#cd5c5c' }}
-        onPress={() => navigation.navigate('Guests')}>
-            <Text style={{ color: '#fff', fontSize: 22, fontWeight: 'bold', fontFamily: 'BebasNeue' }}>Search</Text>
-        </Pressable>
-
+                        <Text style={{ fontSize: 20 }}>{item.description}</Text>
+                    </Pressable>
+                )}
+            />
         </View>
-    );
-};
+    )
+}
 
-export default DestinationSearch;
+export default DestinationSearchScreen

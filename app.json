@@ -17,9 +17,19 @@
       "**/*"
     ],
     "ios": {
+      "bundleIdentifier": "com.thewellness.wellness",
+      "config": {
+        "googleMapsApiKey": "AIzaSyDmt3O_7p1YMSPsLQwh3wqsASXluuxi33E"
+      },
       "supportsTablet": true
     },
     "android": {
+      "package": "com.thewellness.wellness",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyDmt3O_7p1YMSPsLQwh3wqsASXluuxi33E"
+        }
+      },
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"

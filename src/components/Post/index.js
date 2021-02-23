@@ -23,7 +23,7 @@ const Post = (props) => {
         {/* Old Price & New Price */}
         <Text style={{ marginVertical: 10, flexDirection: 'row' }}>
         <Text style={{ fontSize: 18, color: '#333', textDecorationLine: 'line-through' }}>${data.oldPrice} </Text>
-        <Text style={{ fontSize: 18, color: '#333', fontWeight: 'bold' }}>${data.price} / night</Text>
+        <Text style={{ fontSize: 18, color: '#333', fontWeight: 'bold' }}> ${data.newPrice} / night</Text>
         </Text>
         
         {/* Total Price */}

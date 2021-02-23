@@ -5,6 +5,8 @@ import MapView, { PROVIDER_GOOGLE, Marker } from 'react-native-maps';
 
 import CustomMarker from '../../components/CustomMarker';
 
+import PostCarouselItem from '../../components/PostCarouselItem';
+
 import places from '../../../assets/data/Feed';
 
 
@@ -24,30 +26,23 @@ const SearchResultsMaps = (props) => {
                     longitudeDelta: 0.8,
                 }}
             >
-                {/* 
-            <Marker coordinate={{ latitude: 28.3279822, longitude: -16.5124847 }}>
-                <View style={{ backgroundColor: 'white', padding: 5, borderRadius: 10, borderColor: 'grey', borderWidth: 1 }}>
-                    <Text style={{ fontWeight: 'bold' }}>$300</Text>
-                </View>
-            </Marker> */}
 
-                {places.map(place => (
-                <CustomMarker 
-                coordinate={place.coordinate} 
-                price={place.newPrice}
-                isSelected={place.id === selectedPlaceId}
-                onPress={() => setSelectedPlaceID(place.id)}
-                />)
+{places.map(place => (
+                    <CustomMarker
+                        key={place.id}
+                        coordinate={place.coordinate}
+                        price={place.newPrice}
+                        isSelected={place.id === selectedPlaceId}
+                        onPress={() => setSelectedPlaceID(place.id)}
+                    />)
                 )}
 
-                {/* {places.map(place => {
-                    <CustomMarker
-                    coordinate={place.coordinate}
-                    price={place.newPrice}
-                    isSelected={place.id === selectedPlaceId}
-                    onPress={() => setSelectedPlaceID(place.id)} />
-                })} */}
             </MapView>
+
+            <View style={{ position: 'absolute', bottom: 10 }}>
+                    <PostCarouselItem post={places[0]} />
+            </View>
+
         </View>
     );
 };

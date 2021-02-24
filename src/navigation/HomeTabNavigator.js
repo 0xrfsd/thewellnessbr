@@ -2,7 +2,8 @@ import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 import { Fontisto, FontAwesome5 } from "@expo/vector-icons";
-import HomeScreen from '../screens/Home';
+import ExploreNavigator from './ExploreNavigator';
+import PostPage from '../screens/PostScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -27,7 +28,7 @@ const HomeTabNavigator = () => {
 		>
 			<Tab.Screen
 				name="Explore"
-				component={HomeScreen}
+				component={ExploreNavigator}
 				options={{
 					tabBarIcon: ({ color }) => (
 						<Fontisto name="search" size={25} color={color} />
@@ -36,7 +37,7 @@ const HomeTabNavigator = () => {
 			/>
             			<Tab.Screen
 				name="Explorea"
-				component={HomeScreen}
+				component={PostPage}
 				options={{
 					tabBarIcon: ({ color }) => (
 						<Fontisto name="search" size={25} color={color} />
@@ -45,7 +46,7 @@ const HomeTabNavigator = () => {
 			/>
             			<Tab.Screen
 				name="Exploreb"
-				component={HomeScreen}
+				component={PostPage}
 				options={{
 					tabBarIcon: ({ color }) => (
 						<Fontisto name="search" size={25} color={color} />

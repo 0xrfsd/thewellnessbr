@@ -11,7 +11,7 @@ import DestinationSearch from '../screens/DesinationSearch';
 import GuestScreen from '../screens/Guests';
 import SearchResult from '../screens/SearchResults';
 
-import PostScreen from '../components/Post';
+import PostScreen from '../screens/PostScreen';
 
 const Stack = createStackNavigator();
 

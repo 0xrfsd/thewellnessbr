@@ -2,23 +2,24 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native';
 
-import HomeScreen from './src/screens/Home';
-import PostComponent from './src/components/Post';
-import DestinationSearchScreen from './src/screens/DesinationSearch';
-
 import 'react-native-gesture-handler';
-
-import feed from './assets/data/Feed';
-import SearchResult from './src/screens/SearchResults';
-import GuestScreen from './src/screens/Guests';
 
 import Router from './src/navigation/Router';
 
-const post1 = feed[0];
-const post2 = feed[1];
-const post3 = feed[2];
+import { withAuthenticator } from 'aws-amplify-react-native'
 
-export default function App() {
+import Amplify, { Auth } from 'aws-amplify'
+import config from './aws-exports'
+
+Amplify.configure({
+  ...config,
+  Analytics: {
+    disabled: true,
+  },
+});
+Auth.configure(config);
+
+function App() {
   return (
     <>
       <StatusBar style="auto" />
@@ -35,3 +36,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+export default withAuthenticator(App);

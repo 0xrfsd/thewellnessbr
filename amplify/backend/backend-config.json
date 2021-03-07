@@ -1,0 +1,10 @@
+{
+  "auth": {
+    "thewellnessbra17fa518": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}
